@@ -1,6 +1,55 @@
-@MercadoLibreSearch @Smoke
-Feature: MercadoLibre search
-    Scenario: User search and validate results
-        Given User navigates to MercadoLibre page
-        When User search for cars options
-        Then It should show all the results according to the search
+@Smoke
+Feature: Registro en Facebook
+
+Scenario: El usuario se registra en Facebook sin fecha de nacimiento y demas datos obligatorios
+  Given El usuario ingresa a la pagina de registro de Facebook
+  When El usuario ingresa sus datos en el campo First Name
+  And El usuario ingresa sus datos en el campo Last Name
+  And El usuario clickea el button Sign Up
+  Then La pagina muestra un mensaje de error pidiendo ingresar la fecha de nacimiento
+
+Scenario: El usuario se registra en Facebook sin genero y demas datos obligatorios
+  Given El usuario ingresa a la pagina de registro de Facebook
+  When El usuario ingresa sus datos en el campo First Name
+  And El usuario ingresa sus datos en el campo Last Name
+  And El usuario coloca su dia de nacimiento en el dropdown Day
+  And El usuario coloca su mes de nacimiento en el dropdown Month
+  And El usuario coloca su año de nacimiento en el dropdown Year
+  And El usuario clickea el button Sign Up
+  Then La pagina muestra un mensaje de error pidiendo ingresar el resto de los datos obligatorios
+
+Scenario: El usuario se registra sin mail ni contraseña
+  Given El usuario ingresa a la pagina de registro de Facebook
+  When El usuario ingresa sus datos en el campo First Name
+  And El usuario ingresa sus datos en el campo Last Name
+  And El usuario coloca su mes de nacimiento en el dropdown Month
+  And El usuario coloca su dia de nacimiento en el dropdown Day
+  And El usuario coloca su año de nacimiento en el dropdown Year
+  And El usuario clickea el checkbox correspondiente a su genero
+  And El usuario clickea el button Sign Up
+  Then La pagina muestra un mensaje de error pidiendo ingresar el resto de los datos obligatorios
+
+Scenario: El usuario se registra sin contraseña
+  Given El usuario ingresa a la pagina de registro de Facebook
+  When El usuario ingresa sus datos en el campo First Name
+  And El usuario ingresa sus datos en el campo Last Name
+  And El usuario coloca su mes de nacimiento en el dropdown Month
+  And El usuario coloca su dia de nacimiento en el dropdown Day
+  And El usuario coloca su año de nacimiento en el dropdown Year
+  And El usuario clickea el checkbox correspondiente a su genero
+  And El usuario ingresa su email en el campo Email
+  And El usuario clickea el button Sign Up
+  Then La pagina muestra un mensaje de error pidiendo ingresar el resto de los datos obligatorios
+
+Scenario: El usuario se registra de manera exitosa
+  Given El usuario ingresa a la pagina de registro de Facebook
+  When El usuario ingresa sus datos en el campo First Name
+  And El usuario ingresa sus datos en el campo Last Name
+  And El usuario coloca su mes de nacimiento en el dropdown Month
+  And El usuario coloca su dia de nacimiento en el dropdown Day
+  And El usuario coloca su año de nacimiento en el dropdown Year
+  And El usuario clickea el checkbox correspondiente a su genero
+  And El usuario ingresa su email en el campo Email
+  And El usuario ingresa una contraseña en el campo Password
+  And El usuario clickea el button Sign Up
+  Then La pagina redirecciona a otra instancia donde pide una confirmacion de email
