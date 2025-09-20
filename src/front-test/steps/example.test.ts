@@ -18,7 +18,8 @@ import {
   getElementByRoleAndClickIt,
   getElementByRole,
   getByLabelAndFillIt,
-  getByText
+  getByText,
+  getElementByText
 
 } from '../utils/interactions';
 
