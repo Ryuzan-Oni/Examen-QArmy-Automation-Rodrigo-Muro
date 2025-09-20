@@ -1,3 +1,9 @@
-export const inputLabel = 'Buscar productos, marcas y má';
-export const buttonSearch = 'div.nav-icon-search';
-export const divResult = 'Autos, Motos y OtrosAutos y';
+export const firstNameLabel = 'u_0_8_8y';
+export const lastNameLabel = 'u_0_a_nn';
+export const monthLabel = 'month';
+export const dayLabel = 'day';
+export const yearLabel = 'year';
+export const genderMale = 'sex';
+export const emailLabel = 'u_0_h_Ga';
+export const passwordLabel = 'password_step_input';
+export const signUpButton = 'u_0_n_/Q';

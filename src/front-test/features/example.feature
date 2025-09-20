@@ -1,6 +1,6 @@
-@Smoke
 Feature: Registro en Facebook
 
+@Smoke
 Scenario: El usuario se registra en Facebook sin fecha de nacimiento y demas datos obligatorios
   Given El usuario ingresa a la pagina de registro de Facebook
   When El usuario ingresa sus datos en el campo First Name
@@ -8,6 +8,7 @@ Scenario: El usuario se registra en Facebook sin fecha de nacimiento y demas dat
   And El usuario clickea el button Sign Up
   Then La pagina muestra un mensaje de error pidiendo ingresar la fecha de nacimiento
 
+@Smoke
 Scenario: El usuario se registra en Facebook sin genero y demas datos obligatorios
   Given El usuario ingresa a la pagina de registro de Facebook
   When El usuario ingresa sus datos en el campo First Name
@@ -18,6 +19,7 @@ Scenario: El usuario se registra en Facebook sin genero y demas datos obligatori
   And El usuario clickea el button Sign Up
   Then La pagina muestra un mensaje de error pidiendo ingresar el resto de los datos obligatorios
 
+@Smoke 
 Scenario: El usuario se registra sin mail ni contraseña
   Given El usuario ingresa a la pagina de registro de Facebook
   When El usuario ingresa sus datos en el campo First Name
@@ -29,6 +31,7 @@ Scenario: El usuario se registra sin mail ni contraseña
   And El usuario clickea el button Sign Up
   Then La pagina muestra un mensaje de error pidiendo ingresar el resto de los datos obligatorios
 
+@Smoke
 Scenario: El usuario se registra sin contraseña
   Given El usuario ingresa a la pagina de registro de Facebook
   When El usuario ingresa sus datos en el campo First Name
@@ -41,6 +44,7 @@ Scenario: El usuario se registra sin contraseña
   And El usuario clickea el button Sign Up
   Then La pagina muestra un mensaje de error pidiendo ingresar el resto de los datos obligatorios
 
+@Smoke
 Scenario: El usuario se registra de manera exitosa
   Given El usuario ingresa a la pagina de registro de Facebook
   When El usuario ingresa sus datos en el campo First Name
