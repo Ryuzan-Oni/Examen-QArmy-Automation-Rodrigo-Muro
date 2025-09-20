@@ -15,9 +15,10 @@ import {
   signUpButton
 } from '../locators/exampleLocators';
 import {
-  getByPlaceholderAndClickIt,
-  getByPlaceholderAndFillIt,
-  getElementByRole
+  getElementByRoleAndClickIt,
+  getElementByRole,
+  getByLabelAndFillIt,
+  getByText
 
 } from '../utils/interactions';
 
