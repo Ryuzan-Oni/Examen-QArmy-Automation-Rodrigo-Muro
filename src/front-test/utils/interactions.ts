@@ -107,3 +107,11 @@ export const getByLocator = async (page: Page, locator: LocatorType) => {
 export const getByLocatorAndFillIt = async (page: Page, locator: LocatorType, value: string) => {
   await page.locator(locator).fill(value);
 };
+
+export const getByLabelAndSelectOption = async (page: Page, label: string, option) => {
+  await page.getByLabel(label).selectOption(option);
+};
+
+export const getByTextAndClickIt = async (page: Page, text: string, exact?: boolean) => {
+  page.getByText(text).click();
+};
