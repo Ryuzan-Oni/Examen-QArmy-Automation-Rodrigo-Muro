@@ -115,3 +115,15 @@ export const getByLabelAndSelectOption = async (page: Page, label: string, optio
 export const getByTextAndClickIt = async (page: Page, text: string, exact?: boolean) => {
   page.getByText(text).click();
 };
+
+export const getByTestIdAndClickIt = async (page: Page, testId: string) => {
+  page.getByTestId(testId).click();
+};
+
+export const getByTestIdAndFillIt = async (page: Page, testId: string, value: string) => {
+  page.getByTestId(testId).fill(value);
+};
+
+export const getByTestIdAndSelectOption = async (page: Page, testId: string, option) => {
+  await page.getByLabel(testId).selectOption(option);
+};
