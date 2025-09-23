@@ -55,4 +55,4 @@ Scenario: El usuario se registra de manera exitosa
   And El usuario ingresa su username en el campo Usuario
   And El usuario ingresa una contraseña en el campo Password
   And El usuario clickea el button Sign Up
-  Then La pagina redirecciona a otra instancia donde pide una confirmacion de email
+  Then La pagina redirecciona a otra instancia y muestra un mensaje de exito
