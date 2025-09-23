@@ -87,7 +87,7 @@ Then('La pagina muestra un mensaje pidiendo los datos faltantes', async function
 });
 
 
-Then('La pagina redirecciona a otra instancia donde pide una confirmacion de email', async function () {
+Then('La pagina redirecciona a otra instancia y muestra un mensaje de exito', async function () {
   for (const page of pages) {
   await page.goto('https://qarmy.ar/practica/automation/exito.html');
   await page.waitForTimeout(2000);
